@@ -17,6 +17,9 @@
   --card: #ffffff;
   --border: #d2d2d7;
   --nav-bg: rgba(255, 255, 255, 0.72);
+  /* Цвета логотипа GT Dental */
+  --logo-1: #1d3f66;
+  --logo-2: #2f6fa8;
 
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
           "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -34,6 +37,8 @@
     --border: #424245;
     --link: #2997ff;
     --nav-bg: rgba(22, 22, 23, 0.72);
+    --logo-1: #cfe2f7;
+    --logo-2: #5ea8ee;
   }
 }
 
@@ -90,6 +95,11 @@ a:hover { text-decoration: underline; }
   font-size: 17px;
 }
 .nav__logo:hover { text-decoration: none; }
+
+/* Логотип: «GT» жирный тёмно-синий, «DENTAL» — голубой */
+.logo-word { color: var(--logo-2); font-weight: 500; letter-spacing: 0; }
+.logo-word b { color: var(--logo-1); font-weight: 700; }
+.nav__logo .logo-word { font-size: 17px; }
 .nav__links { display: flex; gap: 32px; }
 .nav__links a {
   color: var(--text);
@@ -171,11 +181,8 @@ a:hover { text-decoration: underline; }
   line-height: 1.05;
   font-weight: 700;
   letter-spacing: -0.015em;
-  background: linear-gradient(180deg, var(--text) 30%, #0071e3 140%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
+.hero__title.logo-word { font-weight: 500; }
 .hero__sub {
   margin: 12px 0 28px;
   font-size: clamp(22px, 3.2vw, 32px);
