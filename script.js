@@ -8,6 +8,8 @@
       "nav.services": "Servicii", "nav.why": "De ce noi", "nav.about": "Despre", "nav.contact": "Contacte",
       "hero.eyebrow": "Clinică stomatologică · Chișinău",
       "hero.sub": "Zâmbetul tău, în mâini sigure.",
+      "hero.l1": "Coroană ceramică", "hero.l2": "Bont protetic", "hero.l3": "Implant din titan",
+      "hero.alt": "Implant dentar între doi dinți naturali: coroană ceramică, bont protetic și implant din titan",
       "cta.book": "Programează-te", "cta.more": "Află mai multe", "cta.call": "Sună acum", "cta.write": "Scrie-ne",
       "services.title": "Servicii.",
       "services.lead": "Tot ce are nevoie zâmbetul tău — într-un singur loc.",
@@ -18,7 +20,6 @@
       "s5.t": "Protetică dentară", "s5.d": "Coroane, fațete și punți din zirconiu și ceramică.",
       "s6.t": "Ortodonție", "s6.d": "Aparate dentare și alinieri pentru un zâmbet drept.",
       "s7.t": "Albire dentară", "s7.d": "Albire profesională sigură, cu rezultat vizibil.",
-      "s8.t": "Stomatologie pediatrică", "s8.d": "Grijă blândă pentru cei mai mici pacienți.",
       "why.title": "De ce GT Dental.",
       "f1.big": "Fără durere.", "f1.d": "Anestezie modernă și o abordare atentă la fiecare etapă.",
       "f2.big": "Tehnologii noi.", "f2.d": "Echipament modern și materiale certificate.",
@@ -40,6 +41,8 @@
       "nav.services": "Услуги", "nav.why": "Почему мы", "nav.about": "О клинике", "nav.contact": "Контакты",
       "hero.eyebrow": "Стоматологическая клиника · Кишинёв",
       "hero.sub": "Ваша улыбка в надёжных руках.",
+      "hero.l1": "Керамическая коронка", "hero.l2": "Абатмент", "hero.l3": "Титановый имплант",
+      "hero.alt": "Зубной имплант между двумя естественными зубами: керамическая коронка, абатмент и титановый имплант",
       "cta.book": "Записаться", "cta.more": "Подробнее", "cta.call": "Позвонить", "cta.write": "Написать",
       "services.title": "Услуги.",
       "services.lead": "Всё, что нужно вашей улыбке, — в одном месте.",
@@ -50,7 +53,6 @@
       "s5.t": "Протезирование", "s5.d": "Коронки, виниры и мосты из диоксида циркония и керамики.",
       "s6.t": "Ортодонтия", "s6.d": "Брекеты и элайнеры для ровной улыбки.",
       "s7.t": "Отбеливание зубов", "s7.d": "Безопасное профессиональное отбеливание с заметным результатом.",
-      "s8.t": "Детская стоматология", "s8.d": "Бережная забота о самых маленьких пациентах.",
       "why.title": "Почему GT Dental.",
       "f1.big": "Без боли.", "f1.d": "Современная анестезия и внимательный подход на каждом этапе.",
       "f2.big": "Новые технологии.", "f2.d": "Современное оборудование и сертифицированные материалы.",
@@ -72,6 +74,8 @@
       "nav.services": "Services", "nav.why": "Why us", "nav.about": "About", "nav.contact": "Contact",
       "hero.eyebrow": "Dental clinic · Chișinău",
       "hero.sub": "Your smile, in safe hands.",
+      "hero.l1": "Ceramic crown", "hero.l2": "Abutment", "hero.l3": "Titanium implant",
+      "hero.alt": "Dental implant between two natural teeth: ceramic crown, abutment and titanium implant",
       "cta.book": "Book a visit", "cta.more": "Learn more", "cta.call": "Call now", "cta.write": "Message us",
       "services.title": "Services.",
       "services.lead": "Everything your smile needs — in one place.",
@@ -82,7 +86,6 @@
       "s5.t": "Prosthodontics", "s5.d": "Zirconia and ceramic crowns, veneers and bridges.",
       "s6.t": "Orthodontics", "s6.d": "Braces and aligners for a straight smile.",
       "s7.t": "Teeth whitening", "s7.d": "Safe professional whitening with visible results.",
-      "s8.t": "Pediatric dentistry", "s8.d": "Gentle care for our youngest patients.",
       "why.title": "Why GT Dental.",
       "f1.big": "Pain-free.", "f1.d": "Modern anesthesia and a careful approach at every step.",
       "f2.big": "New technology.", "f2.d": "Modern equipment and certified materials.",
@@ -127,6 +130,10 @@
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var key = el.getAttribute("data-i18n");
       if (dict[key] != null) el.textContent = dict[key];
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-alt");
+      if (dict[key] != null) el.setAttribute("alt", dict[key]);
     });
     document.querySelectorAll("[data-lang]").forEach(function (btn) {
       btn.setAttribute("aria-pressed", String(btn.getAttribute("data-lang") === lang));

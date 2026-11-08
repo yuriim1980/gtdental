@@ -20,6 +20,7 @@
   /* Цвета логотипа GT Dental */
   --logo-1: #1d3f66;
   --logo-2: #2f6fa8;
+  --icon-bg: #e8f1fb;
 
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
           "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -39,6 +40,7 @@
     --nav-bg: rgba(22, 22, 23, 0.72);
     --logo-1: #cfe2f7;
     --logo-2: #5ea8ee;
+    --icon-bg: #1a2b40;
   }
 }
 
@@ -190,33 +192,37 @@ a:hover { text-decoration: underline; }
   font-weight: 500;
 }
 .hero__cta { display: flex; gap: 28px; justify-content: center; align-items: center; flex-wrap: wrap; }
+/* Иллюстрация импланта: 1 — коронка, 2 — абатмент, 3 — имплант */
 .hero__visual {
   margin: 56px auto 0;
-  width: min(560px, 90vw);
-  aspect-ratio: 16 / 9;
+  max-width: 980px;
   border-radius: 28px 28px 0 0;
-  background:
-    radial-gradient(60% 80% at 50% 100%, rgba(0, 113, 227, 0.35), transparent 70%),
-    linear-gradient(180deg, #e8f1fb, #b9d4f1);
-  display: grid;
-  place-items: center;
+  overflow: hidden;
+  background: radial-gradient(50% 70% at 50% 40%, #24507f, #0f2440 60%, #08162a);
 }
-.hero__visual svg {
-  width: 38%;
-  filter: drop-shadow(0 20px 30px rgba(0, 60, 130, 0.25));
-  animation: float 6s ease-in-out infinite;
+.hero__legend {
+  padding: 28px 22px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 28px;
+  font-size: 14px;
+  color: #f5f5f7;
 }
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+.hero__legend > span { display: inline-flex; align-items: center; gap: 8px; }
+.hero__legend b {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0b1a2e;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
-@media (prefers-color-scheme: dark) {
-  .hero__visual {
-    background:
-      radial-gradient(60% 80% at 50% 100%, rgba(41, 151, 255, 0.45), transparent 70%),
-      linear-gradient(180deg, #101820, #0b2440);
-  }
-}
+.hero__visual img { display: block; width: 100%; height: auto; }
 
 /* ---------- Sections ---------- */
 .section { padding: 100px 0; }
@@ -236,7 +242,17 @@ a:hover { text-decoration: underline; }
   transition: transform 0.3s cubic-bezier(.2,.8,.2,1), box-shadow 0.3s;
 }
 .tile:hover { transform: scale(1.02); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); }
-.tile__icon { font-size: 34px; line-height: 1; margin-bottom: 18px; }
+.tile__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--icon-bg);
+  color: var(--logo-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
 .tile h3 { margin: 0 0 8px; font-size: 21px; line-height: 1.19; font-weight: 600; letter-spacing: 0.011em; }
 .tile p { margin: 0; font-size: 15px; line-height: 1.47; color: var(--text-2); }
 
@@ -324,6 +340,5 @@ a:hover { text-decoration: underline; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero__visual svg { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
