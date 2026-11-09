@@ -31,7 +31,7 @@
       "contact.lead": "Te așteptăm cu drag. Programează-te la telefon sau scrie-ne pe Facebook.",
       "contact.address": "Adresă", "contact.addressValue": "Chișinău, Republica Moldova",
       "contact.phone": "Telefon",
-      "contact.hours": "Program", "contact.hoursValue": "Luni 9:00–19:00 · Mar–Vin 9:00–19:30 · Sâm 9:00–14:00",
+      "contact.hours": "Program", "contact.hoursValue": "Luni 9:00–19:00\nMar–Vin 9:00–19:30\nSâm 9:00–14:00",
       "contact.openMap": "Deschide în Google Maps",
       "footer.rights": "Toate drepturile rezervate.", "footer.top": "Sus ↑"
     },
@@ -63,7 +63,7 @@
       "contact.lead": "Будем рады вас видеть. Записывайтесь по телефону или пишите нам в Facebook.",
       "contact.address": "Адрес", "contact.addressValue": "Кишинёв, Республика Молдова",
       "contact.phone": "Телефон",
-      "contact.hours": "Часы работы", "contact.hoursValue": "Пн 9:00–19:00 · Вт–Пт 9:00–19:30 · Сб 9:00–14:00",
+      "contact.hours": "Часы работы", "contact.hoursValue": "Пн 9:00–19:00\nВт–Пт 9:00–19:30\nСб 9:00–14:00",
       "contact.openMap": "Открыть в Google Maps",
       "footer.rights": "Все права защищены.", "footer.top": "Наверх ↑"
     },
@@ -95,7 +95,7 @@
       "contact.lead": "We look forward to seeing you. Book by phone or message us on Facebook.",
       "contact.address": "Address", "contact.addressValue": "Chișinău, Republic of Moldova",
       "contact.phone": "Phone",
-      "contact.hours": "Hours", "contact.hoursValue": "Mon 9:00–19:00 · Tue–Fri 9:00–19:30 · Sat 9:00–14:00",
+      "contact.hours": "Hours", "contact.hoursValue": "Mon 9:00–19:00\nTue–Fri 9:00–19:30\nSat 9:00–14:00",
       "contact.openMap": "Open in Google Maps",
       "footer.rights": "All rights reserved.", "footer.top": "Back to top ↑"
     }
