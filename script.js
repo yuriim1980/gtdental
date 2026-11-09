@@ -132,6 +132,11 @@
       var key = el.getAttribute("data-i18n-alt");
       if (dict[key] != null) el.setAttribute("alt", dict[key]);
     });
+    /* Язык подписей на карте Google */
+    document.querySelectorAll("iframe[data-map]").forEach(function (frame) {
+      var src = frame.getAttribute("src").replace(/!3m2!1s[a-z]{2}!2smd/, "!3m2!1s" + lang + "!2smd");
+      if (src !== frame.getAttribute("src")) frame.setAttribute("src", src);
+    });
     document.querySelectorAll("[data-lang]").forEach(function (btn) {
       btn.setAttribute("aria-pressed", String(btn.getAttribute("data-lang") === lang));
     });
